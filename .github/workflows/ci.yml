@@ -4,9 +4,15 @@ on: [push, pull_request]
 
 jobs:
   lint:
+    container: "fedora:latest"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
+      - name: Install librpm dependencies
+        run: |
+          dnf install -y rpm-devel gcc clang-devel
+
       - uses: actions-rs/toolchain@v1
         with:
             toolchain: nightly
@@ -37,12 +43,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install librpm dependencies
+        run: |
+          dnf install -y rpm-devel gcc clang-devel
+
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-
-      - name: Install librpm dependencies
-        run: sudo dnf install -y rpm-devel
 
       - uses: actions-rs/cargo@v1
         with:
