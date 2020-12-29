@@ -16,7 +16,7 @@ travis-ci = { repository = "rpm-software-management/librpm.rs" }
 maintenance = { status = "passively-maintained" }
 
 [dependencies]
-once_cell = "1.3"
+once_cell = "1.5"
 librpm-sys = { version = "0.1", path = "librpm-sys" }
 streaming-iterator = "0.1"
 
