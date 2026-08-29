@@ -15,9 +15,9 @@ keywords = ["rpm", "linux", "redhat", "fedora", "centos"]
 
 [workspace.dependencies]
 bindgen = "0.72"
-librpm-sys = { version = "0.3.0", path = "librpm-sys" }
-librpmbuild-sys = { version = "0.3.0", path = "librpmbuild-sys" }
-librpmsign-sys = { version = "0.3.0", path = "librpmsign-sys" }
+librpm-sys = { version = "0.4", path = "librpm-sys" }
+librpmbuild-sys = { version = "0.4", path = "librpmbuild-sys" }
+librpmsign-sys = { version = "0.4", path = "librpmsign-sys" }
 
 [package]
 name = "librpm"
